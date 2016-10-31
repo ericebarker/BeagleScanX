@@ -1,0 +1,16 @@
+{
+    "remotePath": "./",
+    "host": "www.flyingbeaglebooks.com",
+    "username": "stotov",
+    "password": "$ax51912",
+    "port": 21,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git"
+    ]
+}

@@ -36,9 +36,56 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="MWSClasses\runtime-src\AbstractMwsObject.cs" />
+    <Compile Include="MWSClasses\runtime-src\IMwsCall.cs" />
+    <Compile Include="MWSClasses\runtime-src\IMwsObject.cs" />
+    <Compile Include="MWSClasses\runtime-src\IMwsReader.cs" />
+    <Compile Include="MWSClasses\runtime-src\IMwsRequestType.cs" />
+    <Compile Include="MWSClasses\runtime-src\IMwsWriter.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsAQCall.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsConnection.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsException.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsResponseHeaderMetadata.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsResponseMetadata.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsUtil.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsXmlBuilder.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsXmlReader.cs" />
+    <Compile Include="MWSClasses\runtime-src\MwsXmlWriter.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\MarketplaceWebServiceSellers.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\MarketplaceWebServiceSellersClient.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\MarketplaceWebServiceSellersConfig.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\MarketplaceWebServiceSellersException.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\MarketplaceWebServiceSellersSample.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\GetServiceStatusRequest.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\GetServiceStatusResponse.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\GetServiceStatusResult.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\HasSellerSuspendedListingsEnum.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\IMWSResponse.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaceParticipationsByNextTokenRequest.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaceParticipationsByNextTokenResponse.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaceParticipationsByNextTokenResult.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaceParticipationsRequest.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaceParticipationsResponse.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaceParticipationsResult.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListMarketplaces.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ListParticipations.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\Marketplace.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\Message.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\MessageList.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\Participation.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ResponseHeaderMetadata.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ResponseMetadata.cs" />
+    <Compile Include="MWSClasses\src\MarketplaceWebServiceSellers\Model\ServiceStatusEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Windows">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Windows Phone Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -54,6 +101,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MWSClasses\dist\MWSClientCsRuntime-1.0.dll" />
+    <Content Include="MWSClasses\dist\MWSSellers_2011-07-01_v2014-09-30.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
